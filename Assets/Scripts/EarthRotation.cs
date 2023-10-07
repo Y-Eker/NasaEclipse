@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class EarthRotation : MonoBehaviour
 {
-    public bool interactingSimulation;
     [Header("Referances")]
     [SerializeField] Transform sunTransform;
     [Header("Attributes")]
     [SerializeField] float idleRotationSpeed;
     [SerializeField] float rotationSpeed;
     [SerializeField] float orbitDistance;
-    private float verticalInput;
+    private float movementInput;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,16 +21,22 @@ public class EarthRotation : MonoBehaviour
     void Update()
     {
         transform.position = sunTransform.position + (transform.position - sunTransform.position).normalized * orbitDistance;
-        if (interactingSimulation)
+        if (Input.GetKey(KeyCode.K))
         {
-            if (verticalInput == 0)
-            {
-                transform.RotateAround(sunTransform.position, Vector3.right, idleRotationSpeed * Time.deltaTime);
-            }
-            else
-            {
-                transform.RotateAround(sunTransform.position, Vector3.right, verticalInput * rotationSpeed * Time.deltaTime);
-            }
+            movementInput = 1;
+        }
+        else if (Input.GetKey(KeyCode.L))
+        {
+            movementInput = -1;
+        }
+        else { movementInput = 0; }
+        if (movementInput == 0)
+        {
+            transform.RotateAround(sunTransform.position, Vector3.right, idleRotationSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.RotateAround(sunTransform.position, Vector3.right, movementInput * rotationSpeed * Time.deltaTime);
         }
     }
 }

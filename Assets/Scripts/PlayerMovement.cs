@@ -25,9 +25,10 @@ public class PlayerMovement : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         rotationY = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivity;
         rotationX = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivity;
-        mouseX += rotationX;
+        mouseX -= rotationX;
+        mouseX = Mathf.Clamp(mouseX, -85f, 85);
         transform.Rotate(Vector3.up * rotationY);
-        Camera.main.transform.Rotate(new Vector3(-rotationX, 0, 0));
+        Camera.main.transform.localRotation = Quaternion.Euler(new Vector3(mouseX, 0, 0));
     }
 
     private void FixedUpdate()

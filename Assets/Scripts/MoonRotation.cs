@@ -21,11 +21,11 @@ public class MoonRotation : MonoBehaviour
     void Update()
     {
         transform.position = earthTransform.position + (transform.position - earthTransform.position).normalized * orbitDistance;
-        if (Input.GetKey(KeyCode.O))
+        if (Input.GetKey(KeyCode.P))
         {
             movementInput = 1;
         }
-        else if (Input.GetKey(KeyCode.P)) 
+        else if (Input.GetKey(KeyCode.O)) 
         {
             movementInput = -1;
         }

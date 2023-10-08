@@ -212,7 +212,42 @@ MonoBehaviour:
   MaterialShader: Universal Render Pipeline/Lit
   RenderTextures: 0
   OutputRemaped: 0
-  Presets: []
+  Presets:
+  - Info:
+      Label: Gold Damaged
+      Description: 
+      URL: pkg://gold_natural
+    PresetIndex: 0
+    PresetValue: 
+    NativePreset: 1
+  - Info:
+      Label: Gold Natural Aged
+      Description: 
+      URL: pkg://gold_natural
+    PresetIndex: 1
+    PresetValue: 
+    NativePreset: 1
+  - Info:
+      Label: 'Rough Damage Surface '
+      Description: 
+      URL: pkg://gold_natural
+    PresetIndex: 2
+    PresetValue: 
+    NativePreset: 1
+  - Info:
+      Label: Nugget Gold
+      Description: 
+      URL: pkg://gold_natural
+    PresetIndex: 3
+    PresetValue: 
+    NativePreset: 1
+  - Info:
+      Label: Nugget Titanium
+      Description: 
+      URL: pkg://gold_natural
+    PresetIndex: 4
+    PresetValue: 
+    NativePreset: 1
   references:
     version: 2
     RefIds:

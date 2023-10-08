@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2755351670155892000}
   - component: {fileID: 7908864840682820318}
   - component: {fileID: 3753427540632546174}
-  - component: {fileID: 4665022138492107196}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Untagged
@@ -123,16 +122,3 @@ MonoBehaviour:
   idleRotationSpeed: 0.75
   rotationSpeed: 25
   orbitDistance: 750
---- !u!114 &4665022138492107196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8681691413582978388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98379d711ff3f1d499f08491f59d3532, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moonLit: {fileID: 2100000, guid: 740ba0b7dd48397418745b6911f616d0, type: 2}

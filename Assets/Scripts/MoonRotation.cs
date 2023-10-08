@@ -20,7 +20,7 @@ public class MoonRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = earthTransform.position + (transform.position - earthTransform.position).normalized * orbitDistance;
+        // transform.position = earthTransform.position + (transform.position - earthTransform.position).normalized * orbitDistance;
         if (Input.GetKey(KeyCode.P))
         {
             movementInput = 1;
